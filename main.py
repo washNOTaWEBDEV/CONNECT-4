@@ -65,11 +65,20 @@ class Game:
         
     
     def draw_board(self):
+        global gameover
         red_player_coin = pygame.image.load('red icon.png')
         yellow_player_coin = pygame.image.load('yellow icon.png')
 
         red_coin_img = pygame.transform.scale(red_player_coin, (tile_size, tile_size))
         yellow_coin_img = pygame.transform.scale(yellow_player_coin, (tile_size, tile_size))
+
+        if player == 1 and not gameover:
+            screen.blit(red_coin_img, (0, 0))
+            screen.blit(red_coin_img, (screen_width-tile_size, 0))
+        elif player == -1 and not gameover:
+            screen.blit(yellow_coin_img, (0, 0))
+            screen.blit(yellow_coin_img, (screen_width-tile_size, 0))
+            
 
         for rowID, row in enumerate(self.board):
             for columnID, item in enumerate(row):
