@@ -30,10 +30,6 @@ class Frametype:
         screen.blit(self.img,  (board_display.x + tile_size* self.tile_data[1], board_display.y + tile_size*self.tile_data[0]))
  
 normalframe = Frametype('connect4frame.png', (1,1))
-topleftframe = Frametype('topleftframe.png', (0,0))
-toprightframe = Frametype('toprightframe.png', (0,6))
-bottomleftframe = Frametype('bottomleftframe.png', (5,0))
-bottomrightframe = Frametype('bottomrightframe.png', (5,6))
 
 def draw_grid_lines():
     for i in range(6):
