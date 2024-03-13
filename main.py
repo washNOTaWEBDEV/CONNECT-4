@@ -11,6 +11,7 @@ font = pygame.font.SysFont("dnpshueiminchopr6b", 35)
 
 screen_width, screen_height = 950, 750
 screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption('Connect 4')
 
 board_width = 560  # 7 tiles
 board_height = 480  # 6 tiles
