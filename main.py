@@ -289,7 +289,7 @@ while run:
                 clicked = False
                 hover = False
                 winning_line.game_line_data = ("direction", "default settings")
-                pygame.mouse.set_pos(tuple(map(lambda x: x + 1, pygame.mouse.get_pos())))
+                pygame.mouse.set_pos((pos[0]+1, pos[1]+1))
                 connect4.reset_board()
 
     pygame.display.flip()
