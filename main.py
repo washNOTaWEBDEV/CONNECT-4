@@ -289,8 +289,9 @@ while run:
                 clicked = False
                 hover = False
                 winning_line.game_line_data = ("direction", "default settings")
-                pygame.mouse.set_pos((pos[0]+1, pos[1]+1))
                 connect4.reset_board()
+                connect4.draw_board()
+                screen.fill((230, 220, 234))
 
     pygame.display.flip()
     clock.tick(30)
